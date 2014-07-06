@@ -59,7 +59,7 @@ a:hover{
 巷で流行っているTwitterに短冊を投稿するやつを、どのくらい短く書けるか挑戦してみました。
 </p>
 <div class="pad10 border tac high">
-<a href="javascript:tanzaku=prompt('ねがいごとを入力してください');out='┌┴┐\n'; for(var i = 0; i != tanzaku.length; i ++){out += '│' + tanzaku.charAt(i) + '│\n'};out += '└─┘\n#tanabata #bookmarklet http://inajob.github.io/tanabata/';document.location.href=('https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent(out));">ねがいごとする！</a>
+<a href="javascript:tanzaku=prompt('ねがいごとを入力してください');out='┌┴┐\n'; for(var i = 0; i != tanzaku.length; i ++){out += '│' + tanzaku.charAt(i) + '│\n'};out += '└─┘\n#tanabata #bookmarklet\nhttp://inajob.github.io/tanabata/';document.location.href=('https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent(out));">ねがいごとする！</a>
 </div>
 <p>
 ブックマークレットなので、上記リンクをブックマークバーにD&amp;Dすればいつでも願えます。
@@ -77,7 +77,7 @@ javascript:
 <hr>
 <h2>もっと短く出来た！</h2>
 <div class="pad10 border tac high">
-<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent('┌┴┐\n│'+prompt('ねがいごと').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet  http://inajob.github.io/tanabata/'); ">ねがいごとする！</a>
+<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent('┌┴┐\n│'+prompt('ねがいごとを入力してください').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet\nhttp://inajob.github.io/tanabata/'); ">ねがいごとする！</a>
 </div>
 <pre class="code">
 javascript:
