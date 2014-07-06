@@ -58,17 +58,15 @@ javascript:
 <hr>
 <h2>もっと短く出来た！</h2>
 <div class="pad10 border tac">
-<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent(['┌┴┐'].concat(prompt('ねがいごと').split(/(?=.)/).map(function(c){return '│'+c+'│'}),['└─┘','#tanabata #bookmarklet  http://inajob.github.io/tanabata/']).join('\n')); ">ねがいごと</a>
+<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent('┌┴┐\n'+prompt('ねがいごと').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet  http://inajob.github.io/tanabata/'); ">ねがいごと</a>
 </div>
 <pre class="code">
 javascript:
   document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent(
-    ['┌┴┐'].concat(
-      prompt('ねがいごと').split(/(?=.)/).map(function(c){return '│'+c+'│'}),
-      ['└─┘','#tanabata #bookmarklet  http://inajob.github.io/tanabata/']
-    ).join('\n')
-  ); 
+    '┌┴┐\n'+prompt('ねがいごと').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet  http://inajob.github.io/tanabata/'
+  );
 </pre>
+shorten by <a href="http://twitter.com/osone3">@osone3</a>
 
 <hr>
 つくったひと<a href="http://twitter.com/ina_ani">@ina_ani</a>
