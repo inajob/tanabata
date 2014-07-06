@@ -45,6 +45,24 @@ a:hover{
   background-color:#669;
 }
 
+h1{
+  border:solid 1px green;
+  border-width:0px 0px 4px 0px;
+}
+h1:before{
+  content:'★';
+  color:yellow;
+}
+h2{
+  border:solid 1px green;
+  border-width:0px 0px 2px 0px;
+}
+h2:before{
+  content:'★';
+  color:yellow;
+}
+
+
 </style>
 </head>
 <body>
@@ -58,32 +76,27 @@ a:hover{
 <p>
 巷で流行っているTwitterに短冊を投稿するやつを、どのくらい短く書けるか挑戦してみました。
 </p>
-<div class="pad10 border tac high">
-<a href="javascript:tanzaku=prompt('ねがいごとを入力してください');out='┌┴┐\n'; for(var i = 0; i != tanzaku.length; i ++){out += '│' + tanzaku.charAt(i) + '│\n'};out += '└─┘\n#tanabata #bookmarklet\nhttp://inajob.github.io/tanabata/';document.location.href=('https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent(out));">ねがいごとする！</a>
-</div>
+
 <p>
 ブックマークレットなので、上記リンクをブックマークバーにD&amp;Dすればいつでも願えます。
 </p>
-<pre class="code">
-javascript:
-  tanzaku=prompt('ねがいごと');
-  out='┌┴┐\n';
-  for(var i = 0; i != tanzaku.length; i ++){
-    out += '│' + tanzaku.charAt(i) + '│\n'
-  };
-  out += '└─┘\n#tanabata #bookmarklet http://inajob.github.io/tanabata/';
-  document.location.href=('https://twitter.com/intent' + '/tweet?text=' + encodeURIComponent(out));
-</pre>
-<hr>
-<h2>もっと短く出来た！</h2>
+
+<h2>願い事をする</h2>
 <div class="pad10 border tac high">
-<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent('┌┴┐\n│'+prompt('ねがいごとを入力してください').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet\nhttp://inajob.github.io/tanabata/'); ">ねがいごとする！</a>
+<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent('┌┴┐\n│'+prompt('ねがいごとを入力してください').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet\nhttp://inajob.github.io/tanabata/'); ">★ねがいごとする！★</a>
 </div>
+<h2>ソースコード</h2>
 <pre class="code">
 javascript:
-  document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent(
-    '┌┴┐\n│'+prompt('ねがいごと').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet  http://inajob.github.io/tanabata/'
-  );
+  document.location.href=
+    'https://twitter.com/intent'+'/tweet?text=' +
+    encodeURIComponent(
+      '┌┴┐\n│'+
+      prompt('ねがいごと')
+        .split('')
+        .join('│\n│') +
+      '│\n└─┘\n#tanabata #bookmarklet  http://inajob.github.io/tanabata/'
+    );
 </pre>
 shorten by <a href="http://twitter.com/osone3">@osone3</a>
 
