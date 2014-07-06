@@ -56,6 +56,21 @@ javascript:
   document.location.href=('http://twitter.com/?status=' + encodeURIComponent(out));
 </pre>
 <hr>
+<h2>もっと短く出来た！</h2>
+<div class="pad10 border tac">
+<a href="javascript:document.location.href='http://twitter.com/?status=' + encodeURIComponent(['┌┴┐'].concat(prompt('ねがいごと').split(/(?=.)/).map(function(c){return '│'+c+'│'}),['└─┘','#tanabata #bookmarklet  http://inajob.github.io/tanabata/']).join('\n')); ">ねがいごと</a>
+</div>
+<pre class="code">
+javascript:
+  document.location.href='http://twitter.com/?status=' + encodeURIComponent(
+    ['┌┴┐'].concat(
+      prompt('ねがいごと').split(/(?=.)/).map(function(c){return '│'+c+'│'}),
+      ['└─┘','#tanabata #bookmarklet  http://inajob.github.io/tanabata/']
+    ).join('\n')
+  ); 
+</pre>
+
+<hr>
 つくったひと<a href="http://twitter.com/ina_ani">@ina_ani</a>
 </body>
 </html>
