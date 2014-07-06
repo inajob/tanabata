@@ -41,11 +41,14 @@ a:hover{
   border:dotted 3px;
   padding:10px;
 }
+.high{
+  background-color:#669;
+}
 
 </style>
 </head>
 <body>
-<h1>ねがいごと</h1>
+<h1>七夕のねがいごと</h1>
 
 <div class="fav pad10 tar">
   <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-noballoon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
@@ -55,8 +58,8 @@ a:hover{
 <p>
 巷で流行っているTwitterに短冊を投稿するやつを、どのくらい短く書けるか挑戦してみました。
 </p>
-<div class="pad10 border tac">
-<a href="javascript:tanzaku=prompt('ねがいごと');out='┌┴┐\n'; for(var i = 0; i != tanzaku.length; i ++){out += '│' + tanzaku.charAt(i) + '│\n'};out += '└─┘\n#tanabata #bookmarklet http://inajob.github.io/tanabata/';document.location.href=('https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent(out));">ねがいごと</a>
+<div class="pad10 border tac high">
+<a href="javascript:tanzaku=prompt('ねがいごとを入力してください');out='┌┴┐\n'; for(var i = 0; i != tanzaku.length; i ++){out += '│' + tanzaku.charAt(i) + '│\n'};out += '└─┘\n#tanabata #bookmarklet http://inajob.github.io/tanabata/';document.location.href=('https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent(out));">ねがいごとする！</a>
 </div>
 <p>
 ブックマークレットなので、上記リンクをブックマークバーにD&amp;Dすればいつでも願えます。
@@ -73,8 +76,8 @@ javascript:
 </pre>
 <hr>
 <h2>もっと短く出来た！</h2>
-<div class="pad10 border tac">
-<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent('┌┴┐\n│'+prompt('ねがいごと').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet  http://inajob.github.io/tanabata/'); ">ねがいごと</a>
+<div class="pad10 border tac high">
+<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent('┌┴┐\n│'+prompt('ねがいごと').split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet  http://inajob.github.io/tanabata/'); ">ねがいごとする！</a>
 </div>
 <pre class="code">
 javascript:
