@@ -41,6 +41,16 @@
 <p>
 ブックマークレットなので、上記リンクをブックマークバーにD&amp;Dすればいつでも願えます。
 </p>
+<pre class="code">
+javascript:
+  tanzaku=prompt('ねがいごと');
+  out='┌┴┐\n';
+  for(var i = 0; i != tanzaku.length; i ++){
+    out += '│' + tanzaku.charAt(i) + '│\n'
+  };
+  out += '└─┘\n#tanabata #bookmarklet http://inajob.github.io/tanabata/';
+  document.location.href=('http://twitter.com/?status=' + encodeURIComponent(out));
+</pre>
 <hr>
 つくったひと<a href="http://twitter.com/ina_ani">@ina_ani</a>
 </body>
