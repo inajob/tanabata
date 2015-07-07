@@ -96,6 +96,13 @@ h2:before{
 
 </div>
 
+<h2>突然</h2>
+<div class="tac">
+<input type="text" id="ttext">
+<button id="tbutton">つぶやく</button>
+</div>
+
+
 
 <hr>
 つくったひと<a href="http://twitter.com/ina_ani">@ina_ani</a>
@@ -111,6 +118,31 @@ negau.addEventListener('click', function(){
   var param = encodeURIComponent('┌┴┐\n│'+str.split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet\nhttp://inajob.github.io/tanabata/twit.html');
   document.location.href="twitter://post?message=" + param;
 });
+
+var button = $('tbutton');
+var text = $('ttext');
+
+button.addEventListener('click', function(){
+  var str = text.value;
+  var len = str.length;
+  var head = "＿"
+  var foot = "￣"
+  for(var i = 0; i < len; i ++){
+    head += "人";
+    foot += "Ｙ";
+  }
+  head += "＿"
+  foot += "￣"
+  var param = encodeURIComponent(
+    head+"\n"
+    "＞" + str + "＜\n" +
+    foot+"\n"
+    "#totuzenmaker"
+  );
+  document.location.href="twitter://post?message=" + param;
+});
+
+
 
 </script>
 
