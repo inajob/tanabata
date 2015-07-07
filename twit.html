@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>tanabata</title>
+<style>
+body{
+  background-color:#336;
+  color:white;
+}
+a{
+  color:#ddf;
+}
+a:hover{
+  color:#336;
+  background-color:white;
+}
+
+.pad10{
+  padding:10px;
+}
+.mar10{
+  margin:10px;
+}
+.tar{
+  text-align:right;
+}
+.tac{
+  text-align:center;
+}
+
+.fav{
+}
+.blue{
+  color:blue;
+}
+.border{
+  border:solid 1px;
+}
+.code{
+  border:dotted 3px;
+  padding:10px;
+}
+.high{
+  background-color:#669;
+}
+
+h1{
+  border:solid 1px green;
+  border-width:0px 0px 4px 0px;
+}
+h1:before{
+  content:'★';
+  color:yellow;
+}
+h2{
+  border:solid 1px green;
+  border-width:0px 0px 2px 0px;
+}
+h2:before{
+  content:'★';
+  color:yellow;
+}
+
+#negai{
+  width:30em;
+}
+
+
+</style>
+</head>
+<body>
+<h1>七夕のねがいごと</h1>
+
+<div class="fav pad10 tar">
+  <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-noballoon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="ina_ani" data-lang="ja" data-count="none">ツイート</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
+<h2>Twitterにつぶやく</h2>
+<div class="pad10 border tac high">
+<input type="text" id="negai">
+<button id="negau">つぶやく</button>
+<a href="javascript:document.location.href='https://twitter.com/intent'+'/tweet?text=' + encodeURIComponent('\n\n　^ ^ \n│'+ ['.  .','&gt;&lt;','++','- -','* *','00'][0|Math.random()*6]+'│\n│〜│\n│'+prompt('ねがいごとを入力してください').split('').join('│\n│')+'│\n└┬┘\n└┘\n#tanabata #bookmarklet\nhttp://inajob.github.io/tanabata/'); ">★ねがいごとする！★</a>
+</div>
+
+<h2>みんなのねがいごと</h2>
+<div>
+<a class="twitter-timeline" href="https://twitter.com/search?q=%23tanabata+%23bookmarklet" data-widget-id="485820287494000640">#tanabata #bookmarklet に関するツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
+
+
+<hr>
+つくったひと<a href="http://twitter.com/ina_ani">@ina_ani</a>
+
+
+<script>
+$ = function(n){return document.getElementById(n)}
+var negau = $('negau');
+var negai = $('negai');
+
+negau.addEventListener('click', function(){
+  var str = negai.value;
+  var param = encodeURIComponent('┌┴┐\n│'+str.split('').join('│\n│')+'│\n└─┘\n#tanabata #bookmarklet\nhttp://inajob.github.io/tanabata/twit.html');
+  document.location.href="twitter://post?message=" + param;
+});
+
+</script>
+
+</body>
+</html>
