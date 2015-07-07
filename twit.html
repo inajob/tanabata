@@ -134,11 +134,12 @@ button.addEventListener('click', function(){
   head += "＿"
   foot += "￣"
   var param = encodeURIComponent(
-    head+"\n"
+    head+"\n" +
     "＞" + str + "＜\n" +
     foot+"\n"
     "#totuzenmaker"
   );
+  alert(param)
   document.location.href="twitter://post?message=" + param;
 });
 
