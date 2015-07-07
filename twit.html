@@ -71,6 +71,14 @@ h2:before{
   font-size:2em;
 }
 
+#ttext{
+  width:90%;
+  font-size:2em;
+}
+#tbutton{
+  font-size:2em;
+}
+
 
 </style>
 </head>
@@ -139,7 +147,7 @@ button.addEventListener('click', function(){
     foot+"\n"+
     "#totuzenmaker"
   );
-  alert(param)
+  alert(decodeURIComponent(param))
   document.location.href="twitter://post?message=" + param;
 });
 
