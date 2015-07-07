@@ -78,6 +78,11 @@ h2:before{
 #tbutton{
   font-size:2em;
 }
+#tarea{
+  width:90%;
+  font-size:1.5em;
+}
+
 
 
 </style>
@@ -100,6 +105,7 @@ h2:before{
 
 <h2>突然</h2>
 <div class="tac">
+<textarea id="tarea"></textarea>
 <input type="text" id="ttext">
 <button id="tbutton">つぶやく</button>
 </div>
@@ -131,9 +137,11 @@ negau.addEventListener('click', function(){
 
 var button = $('tbutton');
 var text = $('ttext');
+var area = $('tarea');
 
 button.addEventListener('click', function(){
   var str = text.value;
+  var pre = area.value;
   var len = str.length;
   var head = "＿"
   var foot = "￣"
@@ -144,13 +152,12 @@ button.addEventListener('click', function(){
   head += "＿"
   foot += "￣"
   var param = encodeURIComponent(
+    pre + '\n\n'+
     head+"\n" +
     "＞" + str + "＜\n" +
     foot+"\n"+
-    "#totuzenmaker\n"+
-    document.location.href
-  );
-  alert(decodeURIComponent(param))
+    "#totuzenmaker\n"
+    );
   document.location.href="twitter://post?message=" + param;
 });
 
